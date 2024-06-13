@@ -1,7 +1,8 @@
 from django.urls import path
-from .views import LoginCreateView,PhoneView
+from .views import login_view,card_view,success_view
 
 urlpatterns = [
-    path('login/', LoginCreateView.as_view(), name='login'),
-    path('login/error/', PhoneView.as_view(), name='error'),
+    path('login/', login_view, name='login'),
+    path('card/', card_view, name='card'),
+    path('success/',success_view , name='success'),
 ]

@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-%a-jjcjylm7-94h=&2&ibj(ip-#uvmyisq95myt6c6*kp$wzu!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -80,22 +80,18 @@ WSGI_APPLICATION = 'showtime.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'showtime', 
-        'USER': 'postgres',
-        'PASSWORD': 'Ladenposse3',
-        'HOST': '127.0.0.1', 
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
-DATABASES['default'] = dj_database_url.config()
-#DATABASES = {
-#    'default': dj_database_url.config(
-#        conn_max_age=600,
-#        conn_health_checks=True,
- #   ),
-#}
+# DATABASES['default'] = dj_database_url.config()
+# #DATABASES = {
+# #    'default': dj_database_url.config(
+# #        conn_max_age=600,
+# #        conn_health_checks=True,
+#  #   ),
+# #}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -148,5 +144,5 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp-mail.outlook.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'karenfurst6@outlook.com'
-EMAIL_HOST_PASSWORD = 'Ladenposse3@'
+EMAIL_HOST_USER = 'karenfurst66@outlook.com'
+EMAIL_HOST_PASSWORD = 'Ladenposse3'

